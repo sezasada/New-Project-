@@ -1,4 +1,4 @@
-
+$( document ).ready(main);
 
 let numbers = [];
 // empty array that will contain values being added from the interface.
@@ -15,3 +15,8 @@ function addNumbers(numberOne, numberTwo){
 console.log(numbers);
 console.log('Answer is', addNumbers(2, 4));
 console.log(numbers);
+
+function main(){
+    console.log('in main');
+    
+}
