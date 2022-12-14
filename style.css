@@ -15,6 +15,7 @@ p {
     text-align: center;
     justify-content: center;
     color: black;
+    font-size: large;
 }
 .button1 {
     text-align: center;
@@ -29,6 +30,7 @@ p {
 
 }
 button {
+    font-size: large;
     font-family: 'Courier New', Courier, monospace;
     border: 2px solid black;
     padding: 5px;
