@@ -44,6 +44,7 @@ $( document ).ready(main);
 
 let numbers = [];
 let moreNumbers = [];
+let evenMoreNumbers = [];
 // empty array that will contain values being added from the interface.
 
 function addNumbers(numberOne, numberTwo){
@@ -70,21 +71,47 @@ function subtractNumbers(numberOne, numberTwo){
 }
 console.log(subtractNumbers(4, 2));
 
+function exponential(numberOne, numberTwo){
+    console.log( numberOne + ' to the power of ' + numberTwo);
+    const numberObject = {
+        valueOne: numberOne,
+        valueTwo: numberTwo,
+        answer: numberOne ** numberTwo
+    }
+    console.log(numberOne ** numberTwo);
+    evenMoreNumbers.push(numberObject);
+}
+console.log(exponential(2, 5));
+
 function main(){
     $( '#resultButton' ).on( 'click', sayNumbers );
     $( '#subtractButton' ).on( 'click', subNumbers );
+    $( '#exponentialButton').on( 'click', exNumbers);
 }   
+
+function exNumbers(){
+    let e = parseInt(prompt( 'Enter First Number' ));
+    let f = parseInt(prompt( 'Enter Second Number' ));
+    console.log(evenMoreNumbers.push(exponential(e, f)));
+    console.log('Answer is:', e ** f);
+}
+
+console.log(evenMoreNumbers);
 
 function subNumbers(){
     let c = parseInt(prompt( 'Enter First Number' ));
     let d = parseInt(prompt( 'Enter Second Number' ));
     console.log(moreNumbers.push(subtractNumbers(c, d)));
+    console.log('Answer is:', c -= d);
 }
+
 console.log(moreNumbers);
+
 function sayNumbers(){
     let a = parseInt(prompt( 'Enter First Number' ));
     let b = parseInt(prompt( 'Enter Second Number' ));
     console.log(numbers.push(addNumbers(a, b)));
     console.log('Answer is:', a += b);
 }
+
 console.log(numbers);
