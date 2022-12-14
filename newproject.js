@@ -1,7 +1,7 @@
 
 let number = [ 3, 4, 5, 19, -5];
 
-console.log('In New Array')
+console.log('In Number Array')
 
 for( let x = 0; x < number.length; x++ ){
     if( number[x] > 0) {
